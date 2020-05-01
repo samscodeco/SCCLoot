@@ -1,5 +1,5 @@
 # SCCLoot
-by samscodeco <sam@samscode.co>
+by samscodeco &lt;sam@samscode.co&gt;
 
 This script adds simple, configurable loot spawning to any Arma 3 mission.
 
