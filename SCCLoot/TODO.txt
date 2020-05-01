@@ -1,0 +1,5 @@
+To Do:
+
+Buildings:
+- Rest of Arma 3 buildings incl. custom positions
+- Arma 1, 2 + OA buildings incl. custom positions
