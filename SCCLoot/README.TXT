@@ -1,4 +1,4 @@
-SCCLoot for Arma 3 (Version 0.1 - 2020-05-01)
+SCCLoot for Arma 3 (Version 0.2 - 2020-05-02)
 by samscodeco <sam@samscode.co>
 
 This script adds simple, configurable loot spawning to any Arma 3 mission.
