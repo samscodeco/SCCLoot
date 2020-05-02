@@ -15,7 +15,7 @@ scclootCustomPosClassnames = [];
 
 {
 	
-	scclootCustomPosClassnames pushBack (_x select 0);
+	scclootCustomPosClassnames pushBack (toLowerANSI (_x select 0));
 	
 } forEach scclootCustomPosBuildings;
 
