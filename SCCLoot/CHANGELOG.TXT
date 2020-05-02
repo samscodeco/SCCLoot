@@ -4,6 +4,7 @@
 Features:
 - Added Apex structures.
 - Added Malden structures.
+- Added Livonia structures
 
 Changes:
 - Reduced default spawn range value.
