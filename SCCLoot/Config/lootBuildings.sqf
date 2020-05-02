@@ -11,10 +11,6 @@
 
 scclootListBuildings = [
 	
-	// ARMA 2 BUILDINGS
-	["Land_A_GeneralStore_01",5],
-	["Land_A_GeneralStore_01a",5],
-	
 	// ARMA 3 BUILDINGS
 	// ALTIS/STRATIS
 	["Land_GH_Gazebo_F", 1],
@@ -454,7 +450,71 @@ scclootListBuildings = [
 	
 	["Land_HealthCenter_01_F", 4],
 	
-	["Land_VillageStore_01_F", 5]
+	["Land_VillageStore_01_F", 5],
+	
+	// CUP STRUCTURES (Note: Some CUP structure classnames contain typos)
+	// EUROPEAN
+	["Land_HouseV2_02_Interier", 1],
+	["Land_HouseV2_02_Interier_dam", 1],
+	["Land_Shed_wooden", 1],
+	["Land_HouseV2_04_interier_dam", 1],
+	["Land_HouseBlock_A3", 1],
+	["Land_HouseBlock_A1_1", 1],
+	["Land_HouseBlock_A1", 1],
+	["Land_A_Pub_01", 1],
+	["Land_Barn_W_01_dam", 1],
+	["Land_Barn_W_01", 1],
+	["Land_Barn_W_02", 1],
+	["Land_Nav_Boathouse", 1],
+	["Land_A_MunicipalOffice", 1],
+	["Land_HouseB_Tenement", 1],
+	["Land_R_HouseV2_02", 1],
+	["Land_HouseV_1l4", 1],
+	["Land_R_HouseV2_04", 1],
+	["Land_Church_03", 1],
+	["Land_Church_03_dam", 1],
+	["Land_HouseV2_04_interier", 1],
+	["Land_A_Office01", 1],
+	["Land_A_Castle_Bergfrit", 1],
+	["Land_A_Castle_Gate", 1],
+	["Land_Farm_Cowshed_c_dam", 1],
+	["Land_Farm_Cowshed_c", 1],
+	["Land_Farm_Cowshed_b_dam", 1],
+	["Land_Farm_Cowshed_b", 1],
+	["Land_Farm_Cowshed_a_dam", 1],
+	["Land_Farm_Cowshed_a", 1],
+	["Land_HouseBlock_B6", 1],
+	["Land_A_Office02", 1],
+	["Land_A_Office02_dam", 1],
+	
+	["Land_Ind_Expedice_1", 2],
+	["Land_Ind_SiloVelke_01", 2],
+	["Land_Ind_Mlyn_01", 2],
+	["Land_Ind_Pec_01", 2],
+	["Land_Ind_MalyKomin", 2],
+	["Land_Ind_Garage01", 2],
+	["Land_Ind_Pec_02", 2],
+	["Land_Ind_Vysypka", 2],
+	["Land_Rail_House_01", 2],
+	["Land_rail_station_big", 2],
+	
+	["Land_Mil_Barracks_i", 3],
+	["Land_Mil_Barracks", 3],
+	["Land_Mil_Guardhouse", 3],
+	["Land_Misc_deerstand", 3],
+	["Land_Mil_ControlTower", 3],
+	["Land_Mil_ControlTower_no_interior_CUP", 3],
+	["Land_Mil_ControlTower_dam", 3],
+	["Land_Mil_ControlTower_no_interior_dam_CUP", 3],
+	["Land_Mil_House", 3],
+	["Land_Mil_House_dam", 3],
+	
+	["INS_WarfareBFieldhHospital", 4],
+	["CDF_WarfareBFieldhHospital", 4],
+	["RU_WarfareBFieldhHospital", 4],
+	["GUE_WarfareBFieldhHospital", 4],
+	["USMC_WarfareBFieldhHospital", 4],
+	["Land_A_Hospital", 4]
 	
 ];
 
