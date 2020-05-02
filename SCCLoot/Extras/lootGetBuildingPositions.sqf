@@ -1,14 +1,20 @@
-_buildingObject = cursorObject;
-_posArray = [];
+scc_fnc_getBuildingPositions = {
 
-{
-	
-	if (typeOf _x == "Sign_Arrow_F") then {
-		
-		_posArray pushBack (_buildingObject worldToModel (getPos _x));
-		
-	};
-	
-} forEach (nearestObjects [player, ["Building"], 200]);
+	_buildingObject = cursorObject;
+	_posArray = [];
 
-_posArray;
+	{
+		
+		if (typeOf _x == "Sign_Arrow_F") then {
+			
+			_posArray pushBack (_buildingObject worldToModel (getPos _x));
+			
+		};
+		
+	} forEach (nearestObjects [player, ["Building"], 200]);
+
+	_posArray;
+	
+};
+
+[] call scc_fnc_getBuildingPositions;
