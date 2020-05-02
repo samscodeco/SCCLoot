@@ -64,7 +64,7 @@ _getLowestChance = {
 					
 					_currentBlacklistBuilding = _x;
 					
-					if (_currentBuildingClass == _currentBlacklistBuilding) then {
+					if ((toLowerANSI _currentBuildingClass) == _currentBlacklistBuilding) then {
 						
 						_buildingIsOnBlacklist = true;
 						_buildingsBlacklistedThisPass = _buildingsBlacklistedThisPass + 1;
@@ -80,7 +80,7 @@ _getLowestChance = {
 				// Check if building has custom positions
 				_isBuildingCustom = false;
 				
-				if (_currentBuildingClass in scclootCustomPosClassnames) then {
+				if ((toLowerANSI _currentBuildingClass) in scclootCustomPosClassnames) then {
 					
 					_isBuildingCustom = true;
 					
@@ -116,8 +116,10 @@ _getLowestChance = {
 						// Search for current building in the loot config to get its loot spawn type
 						{
 							
-							if (_currentBuildingClass == _x select 0) then {
+							if ((toLowerANSI _currentBuildingClass) == (toLowerANSI (_x select 0))) then {
+							
 								_currentBuildingType = _x select 1;
+								
 							};
 							
 						} forEach scclootListBuildings;
@@ -166,7 +168,7 @@ _getLowestChance = {
 								_entryName = _x select 0;
 								_entryPos = _x select 1;
 								
-								if (_entryName == _currentBuildingClass) then {
+								if (_entryName == (toLowerANSI _currentBuildingClass)) then {
 									
 									_customPositionsRelative = _entryPos;
 									
