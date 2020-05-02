@@ -6,7 +6,7 @@ while {true} do {
 	
 	if (scclootDebugMessages) then {
 	
-		systemChat "[INFO] Running loot spawner...";
+		systemChat "[SCCLoot] Running loot spawner...";
 	
 	};
 	
