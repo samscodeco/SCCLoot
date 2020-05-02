@@ -100,7 +100,7 @@ This script released under the BSD License. You are free to modify or distribute
 For more information, see the license file in the source directory.
 
 -----------------------------------
-4. SPECIAL THANKS
+5. SPECIAL THANKS
 -----------------------------------
 
 - BIS Forums/Wiki contributors for answering all my dumb questions.
