@@ -23,6 +23,10 @@ files other than these three may result in unintended behaviour.
 
 For a more detailed description and help, see the README.txt file inside the SCCLoot directory.
 
+- [Forum Page](https://forums.bohemia.net/forums/topic/229026-release-sccloot/)
+- [Armaholic Page](http://www.armaholic.com/page.php?id=36022)
+- [GitHub Source](https://github.com/samscodeco/SCCLoot)
+
 ## Known Issues
 - Items may clip into the floor in some buildings.
 
