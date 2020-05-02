@@ -1,5 +1,5 @@
 # SCCLoot
-by samscodeco &lt;sam@samscode.co&gt;
+by samscodeco <sam@samscode.co>
 
 This script adds simple, configurable loot spawning to any Arma 3 mission.
 
@@ -22,6 +22,9 @@ files other than these three may result in unintended behaviour.
 ## More Information
 
 For a more detailed description and help, see the README.txt file inside the SCCLoot directory.
+
+## Known Issues
+- Items may clip into the floor in some buildings.
 
 ## License
 
