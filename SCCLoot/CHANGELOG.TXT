@@ -2,7 +2,8 @@
 0.2
 ----------------
 Features:
-- Added Tanoa structures.
+- Added Apex structures.
+- Added Malden structures.
 
 Changes:
 - Reduced default spawn range value.
