@@ -3,6 +3,7 @@
 ----------------
 Features:
 - Added CUP European Structures.
+- Added CUP Misc Structures.
 
 Changes:
 - Config file building classes are no longer case-sensitive.
