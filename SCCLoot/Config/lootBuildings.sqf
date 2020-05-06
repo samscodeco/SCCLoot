@@ -2,7 +2,9 @@
 
 // By default this list contains buildings from ARMA, ARMA 2 + OA, ARMA 3
 // Any classnames that do not exist in-game (i.e. mods that aren't loaded) are simply ignored
-// 0 = default/undefined (will spawn in buildings that are not specified below)
+
+// Loot Types
+// Default/undefined loot will spawn in buildings that are not specified below
 // 1 = civil
 // 2 = industrial
 // 3 = military
@@ -452,8 +454,8 @@ scclootListBuildings = [
 	
 	["Land_VillageStore_01_F", 5],
 	
-	// CUP STRUCTURES (Note: Some CUP structure classnames contain typos)
-	// EUROPEAN
+	// CUP STRUCTURES (Note: Some CUP classnames contain intentional typos)
+	// CUP EUROPEAN
 	["Land_HouseV2_02_Interier", 1],
 	["Land_HouseV2_02_Interier_dam", 1],
 	["Land_Shed_wooden", 1],
@@ -516,7 +518,7 @@ scclootListBuildings = [
 	["USMC_WarfareBFieldhHospital", 4],
 	["Land_A_Hospital", 4],
 	
-	// MISCELLANEOUS
+	// CUP MISCELLANEOUS
 	["Land_Panelak", 1],
 	["Land_Panelak1_Grey", 1],
 	["Land_Panelak2", 1],
@@ -646,7 +648,123 @@ scclootListBuildings = [
 	["Land_A_GeneralStore_01a_dam", 5],
 	["Land_R_A_GeneralStore_01a", 5],
 	["Land_GeneralStore_01a_dam_PMC", 5],
-	["Land_A_GeneralStore_01_dam", 5]
+	["Land_A_GeneralStore_01_dam", 5],
+	
+	// CUP MIDDLE EASTERN
+	["Land_A_Mosque_big_wall_gate_EP1", 1],
+	["Land_House_C_9_dam_EP1", 1],
+	["Land_House_C_3_EP1", 1],
+	["Land_A_Mosque_big_wall_corner_EP1", 1],
+	["Land_House_C_9_EP1", 1],
+	["Land_House_C_2_DAM_EP1", 1],
+	["Land_House_C_1_EP1", 1],
+	["Land_A_Mosque_big_wall_EP1", 1],
+	["Land_House_C_3_dam_EP1", 1],
+	["Land_A_Mosque_big_hq_EP1", 1],
+	["Land_A_Mosque_big_wall_gate_dam_EP1", 1],
+	["Land_House_C_2_EP1", 1],
+	["Land_A_Mosque_big_minaret_1_dam_EP1", 1],
+	["Land_A_Mosque_big_addon_EP1", 1],
+	["Land_House_C_1_dam_EP1", 1],
+	["Land_House_C_1_v2_dam_EP1", 1],
+	["Land_A_Mosque_big_minaret_2_dam_EP1", 1],
+	["Land_A_Mosque_big_minaret_1_EP1", 1],
+	["Land_House_C_1_v2_EP1", 1],
+	["Land_A_Mosque_big_minaret_2_EP1", 1],
+	["Land_A_Minaret_porto_dam_EP1", 1],
+	["Land_R_Minaret", 1],
+	["Land_A_Minaret_Porto_EP1", 1],
+	["Land_A_Minaret_dam_EP1", 1],
+	["Land_A_Minaret_EP1", 1],
+	["Land_A_Mosque_small_1_dam_EP1", 1],
+	["Land_A_Office01_EP1", 1],
+	["Land_House_C_11_dam_EP1", 1],
+	["Land_Dum_istan3", 1],
+	["Land_A_Mosque_small_1_EP1", 1],
+	["Land_Dum_istan3_hromada2", 1],
+	["Land_A_Mosque_small_2_dam_EP1", 1],
+	["Land_House_C_11_EP1", 1],
+	["Land_A_Mosque_small_2_EP1", 1],
+	["Land_House_C_4_dam_EP1", 1],
+	["Land_House_C_10_dam_EP1", 1],
+	["Land_House_K_3_EP1", 1],
+	["Land_House_L_9_EP1", 1],
+	["Land_House_K_8_EP1", 1],
+	["Land_House_L_7_EP1", 1],
+	["Land_House_C_4_EP1", 1],
+	["Land_House_C_10_EP1", 1],
+	["Land_Dum_istan2b", 1],
+	["Land_House_L_4_EP1", 1],
+	["Land_House_L_1_EP1", 1],
+	["Land_House_K_3_dam_EP1", 1],
+	["Land_House_K_8_dam_EP1", 1],
+	["Land_House_C_5_V3_dam_EP1", 1],
+	["Land_House_K_1_EP1", 1],
+	["Land_House_L_3_EP1", 1],
+	["Land_House_L_7_dam_EP1", 1],
+	["Land_Dum_istan2", 1],
+	["Land_House_K_7_EP1", 1],
+	["Land_Dum_istan3_hromada", 1],
+	["Land_House_L_4_dam_EP1", 1],
+	["Land_A_Villa_dam_EP1", 1],
+	["Land_House_C_5_V3_EP1", 1],
+	["Land_House_K_6_EP1", 1],
+	["Land_House_K_5_EP1", 1],
+	["Land_House_L_3_dam_EP1", 1],
+	["Land_Dum_istan2_02", 1],
+	["Land_House_K_7_dam_EP1", 1],
+	["Land_House_L_8_EP1", 1],
+	["Land_House_C_5_V1_dam_EP1", 1],
+	["Land_House_C_5_V2_dam_EP1", 1],
+	["Land_House_L_6_EP1", 1],
+	["Land_House_L_3_H_EP1", 1],
+	["Land_Dum_istan4_big_inverse", 1],
+	["Land_House_K_6_dam_EP1", 1],
+	["Land_House_K_5_dam_EP1", 1],
+	["Land_House_L_8_dam_EP1", 1],
+	["Land_House_C_5_V2_EP1", 1],
+	["Land_House_C_5_V1_EP1", 1],
+	["Land_House_K_2_basehide_EP1", 1],
+	["Land_House_L_6_dam_EP1", 1],
+	["Land_Dum_istan4_inverse", 1],
+	["Land_Dum_istan4_big", 1],
+	["Land_House_C_5_dam_EP1", 1],
+	["Land_A_Villa_EP1", 1],
+	["Land_House_C_5_EP1", 1],
+	["Land_Dum_istan4_detaily1", 1],
+	["Land_Dum_istan3_pumpa", 1],
+	["Land_Dum_istan4", 1],
+	
+	["Land_Ind_Coltan_Main_EP1", 2],
+	["Land_A_BuildingWIP_EP1", 2],
+	["Land_Ind_PowerStation_EP1", 2],
+	["Land_Ind_Garage01_EP1", 2],
+	["Land_House_C_12_EP1", 2],
+	["Land_House_C_12_dam_EP1", 2],
+	
+	["Land_Mil_House_no_interior_EP1_CUP", 3],
+	["Land_Mil_House_no_interior_dam_EP1_CUP", 3],
+	["Land_Mil_House_EP1", 3],
+	["Land_Mil_House_dam_EP1", 3],
+	["Land_A_Stationhouse_ep1", 3],
+	["Land_Barrack2_EP1", 3],
+	["Land_Mil_Guardhouse_EP1", 3],
+	["Land_Mil_Guardhouse_no_interior_EP1_CUP", 3],
+	["Land_Mil_Barracks_EP1", 3],
+	["Land_Mil_Barracks_i_EP1", 3],
+	["Land_Com_tower_ep1", 3],
+	["Land_Mil_ControlTower_no_interior_EP1_CUP", 3],
+	["Land_Mil_ControlTower_no_interior_dam_EP1_CUP", 3],
+	["Land_Mil_ControlTower_dam_EP1", 3],
+	["Land_Mil_ControlTower_EP1", 3],
+	["Land_Mil_hangar_EP1", 3],
+	
+	["US_WarfareBFieldhHospital_Base_EP1", 4],
+	["TK_GUE_WarfareBFieldhHospital_Base_EP1", 4],
+	["TK_WarfareBFieldhHospital_Base_EP1", 4],
+	
+	["Land_Market_stalls_01_EP1", 5],
+	["Land_Market_stalls_02_EP1", 5]
 	
 ];
 
