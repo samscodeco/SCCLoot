@@ -231,9 +231,15 @@ _getLowestChance = {
 								};
 								
 								_posToSpawnLoot = _x;
-								_lootSpawnPositionOffset = 1;
-								_posToSpawnLoot set [2,(_posToSpawnLoot select 2) + _lootSpawnPositionOffset];
-								_itemBox setPos _posToSpawnLoot;
+								
+								// Try to move loot using setVehiclePosition to avoid floor clipping. If this is not possible, use setPos with a Y offset instead.
+								if (!(_itemBox setVehiclePosition [_posToSpawnLoot, [], 0, "CAN_COLLIDE"])) then {
+								
+									_lootSpawnPositionOffset = 1;
+									_posToSpawnLoot set [2,(_posToSpawnLoot select 2) + _lootSpawnPositionOffset];
+									_itemBox setPos _posToSpawnLoot;
+									
+								};
 								
 								// Add the item box to the list of item boxes for the current building
 								_currentBuildingLootSpots pushBack _itemBox;
