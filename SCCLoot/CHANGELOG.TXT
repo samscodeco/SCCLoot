@@ -9,6 +9,9 @@ Features:
 Changes:
 - Config file building classes are no longer case-sensitive.
 
+Fixes:
+- Fixed most issues with loot clipping into the floor
+
 ----------------
 0.2 (2020-05-02)
 ----------------
