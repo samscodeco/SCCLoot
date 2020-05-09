@@ -10,6 +10,9 @@
 // Load buildings with custom positions
 [] call compile preprocessFileLineNumbers "SCCLoot\Config\lootAddedBuildings.sqf";
 
+// Load pre-defined containers
+[] call compile preprocessFileLineNumbers "SCCLoot\Config\lootContainers.sqf";
+
 // Get buildings with custom positions
 scclootCustomPosClassnames = [];
 
