@@ -23,6 +23,7 @@ files other than these three may result in unintended behaviour.
 
 For a more detailed description and help, see the README.txt file inside the SCCLoot directory.
 
+- [Latest Stable (0.3)](http://www.samscode.co/code/SCCLoot.zip)
 - [Forum Page](https://forums.bohemia.net/forums/topic/229026-release-sccloot/)
 - [Armaholic Page](http://www.armaholic.com/page.php?id=36022)
 - [GitHub Source](https://github.com/samscodeco/SCCLoot)
