@@ -39,6 +39,45 @@ _getLowestChance = {
 	
 };
 
+_getLootTable = {
+	
+	_lootType = _this select 0;
+	
+	// Loot Categories
+	// Get correct array to spawn items from
+	_lootArray = [];
+	
+	switch (_lootType) do {
+		
+		case 1: {
+			_lootArray = scclootCivil;
+		};
+		
+		case 2: {
+			_lootArray = scclootIndustrial;
+		};
+		
+		case 3: {
+			_lootArray = scclootMilitary;
+		};
+		
+		case 4: {
+			_lootArray = scclootMedical;
+		};
+		
+		case 5: {
+			_lootArray = scclootSupermarket;
+		};
+		
+		default {
+			_lootArray = scclootDefault;
+		};
+		
+	};
+	
+	_lootArray;
+	
+};
 
 {
 	
@@ -124,37 +163,7 @@ _getLowestChance = {
 							
 						} forEach scclootListBuildings;
 						
-						_currentBuildingLootArray = [];
-						
-						// Loot Categories
-						// Get correct array to spawn items from
-						switch (_currentBuildingType) do {
-							
-							case 1: {
-								_currentBuildingLootArray = scclootCivil;
-							};
-							
-							case 2: {
-								_currentBuildingLootArray = scclootIndustrial;
-							};
-							
-							case 3: {
-								_currentBuildingLootArray = scclootMilitary;
-							};
-							
-							case 4: {
-								_currentBuildingLootArray = scclootMedical;
-							};
-							
-							case 5: {
-								_currentBuildingLootArray = scclootSupermarket;
-							};
-							
-							default {
-								_currentBuildingLootArray = scclootDefault;
-							};
-							
-						};
+						_currentBuildingLootArray = [_currentBuildingType] call _getLootTable;
 						
 						// Get array of all building positions
 						_buildingPositions = [];
@@ -262,9 +271,79 @@ _getLowestChance = {
 			
 		} forEach _buildings;
 		
+		// Get nearby containers
+		if (count scclootContainers > 0) then {
+			
+			// Iterate through containers
+			{
+				_containerName = _x select 0;
+				_containerType = _x select 1;
+				_containerObj = missionNamespace getVariable [_containerName, objNull];
+				_containerLootArray = [_containerType] call _getLootTable;
+				
+				// If player is within range
+				if (_currentPlayer distance _containerObj < scclootSpawnRange) then {
+					
+					if (!(_containerObj in scclootCurrentContainersWithLoot)) then {
+					
+						// Select which items can spawn at the current position
+						_randomNumber = [1,100] call BIS_fnc_randomInt;
+						_possibleItemsToSpawn = [];
+						{
+						
+							if (_x select 1 >= _randomNumber) then {
+							
+								_possibleItemsToSpawn pushBack _x;
+								
+							};
+							
+						} forEach _containerLootArray;
+						
+						_itemToSpawnClass = "";
+						
+						// Only try to spawn items if there are items to spawn
+						if ((count _possibleItemsToSpawn) > 0) then {
+							
+							// Give rarest loot that can spawn priority		
+							_itemsToSpawnFinal = [_possibleItemsToSpawn] call _getLowestChance;
+							
+							_itemToSpawn = selectRandom _itemsToSpawnFinal;
+							
+							// Spawn the item
+							_itemToSpawnClass = _itemToSpawn select 0;
+							
+							_itemSpawned = _containerObj addItemCargoGlobal [_itemToSpawnClass,1];
+							
+						};
+						
+						// Get magazines from config
+						_itemToSpawnIsWeapon = 0;
+						_itemMags = getArray (configFile >> "CfgWeapons" >> _itemToSpawnClass >> "magazines");
+						
+						// If item has associated magazines, spawn some
+						if (count _itemMags > 0) then {
+						
+							_mag = _itemMags select (floor (random (count _itemMags)));
+							_numberOfMagsToSpawn = [scclootMinMagazinesToSpawn,scclootMaxMagazinesToSpawn] call BIS_fnc_randomInt;
+							_containerObj addMagazineCargoGlobal [_mag,_numberOfMagsToSpawn];
+							
+						};
+						
+						scclootCurrentContainersWithLoot pushBack _containerObj;
+						
+					};
+					
+				};
+				
+			} forEach scclootContainers;
+			
+		};
+		
 	};
 	
 } forEach allPlayers;
+
+
 
 // Write debug output
 if (scclootDebugMessages) then {

@@ -1,6 +1,7 @@
 // Array of all the buildings containing loot
 // Format is object, array of loot spots
 scclootCurrentBuildingsWithLoot = [];
+scclootCurrentContainersWithLoot = [];
 
 while {true} do {
 	

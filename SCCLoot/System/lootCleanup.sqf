@@ -1,13 +1,10 @@
 _lootClearedThisPass = 0;
 _buildingsClearedThisPass = 0;
 
-{
-
-	_buildingObject = _x select 0;
-	_buildingLootSpots = _x select 1;
-	_buildingDistance = player distance _buildingObject;
+_getNearestPlayer = {
 	
-	// Get the nearest player to the current building
+	_structureObj = _this select 0;
+	
 	_nearestPlayer = objNull;
 	_currentNearestDist = worldSize;
 	
@@ -18,7 +15,7 @@ _buildingsClearedThisPass = 0;
 		// Only check alive players
 		if (alive _currentPlayer) then {
 			
-			_currentDist = _currentPlayer distance _buildingObject;
+			_currentDist = _currentPlayer distance _structureObj;
 			
 			if (_currentDist < _currentNearestDist) then {
 				
@@ -30,7 +27,20 @@ _buildingsClearedThisPass = 0;
 		
 	} forEach allPlayers;
 	
-	if (_currentNearestDist > scclootCleanupRange) then {
+	_currentNearestDist;
+	
+};
+
+// Clean up buildings
+{
+
+	_buildingObject = _x select 0;
+	_buildingLootSpots = _x select 1;
+	_buildingDistance = player distance _buildingObject;
+
+	_nearestPlayerDist = [_buildingObject] call _getNearestPlayer;
+	
+	if (_nearestPlayerDist > scclootCleanupRange) then {
 	
 		{
 		
@@ -45,6 +55,29 @@ _buildingsClearedThisPass = 0;
 	};
 
 } forEach scclootCurrentBuildingsWithLoot;
+
+// Clean up loot containers if any are defined
+if (count scclootContainers > 0) then {
+	
+	{
+		
+		_containerObj = _x;
+		
+		_nearestPlayerDist = [_containerObj] call _getNearestPlayer;
+		
+		if (_nearestPlayerDist > scclootCleanupRange) then {
+			
+			clearItemCargoGlobal _containerObj;
+			clearWeaponCargoGlobal _containerObj;
+			clearMagazineCargoGlobal _containerObj;
+			clearBackpackCargoGlobal _containerObj;
+			scclootCurrentContainersWithLoot deleteAt _forEachIndex;
+			
+		};
+		
+	} forEach scclootCurrentContainersWithLoot;
+	
+};
 
 // Write debug output
 if (scclootDebugMessages) then {
