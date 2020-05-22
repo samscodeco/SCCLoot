@@ -253,6 +253,8 @@ _getLootTable = {
 								// Add the item box to the list of item boxes for the current building
 								_currentBuildingLootSpots pushBack _itemBox;
 								
+								_lootSpawnedThisPass = _lootSpawnedThisPass + 1;
+								
 							}
 							
 						} forEach _buildingPositions;
@@ -270,6 +272,8 @@ _getLootTable = {
 			};
 			
 		} forEach _buildings;
+		
+		_lootContainerCount = 0;
 		
 		// Get nearby containers
 		if (count scclootContainers > 0) then {
@@ -331,7 +335,11 @@ _getLootTable = {
 						
 						scclootCurrentContainersWithLoot pushBack _containerObj;
 						
+						
+						
 					};
+					
+					_lootContainerCount = _lootContainerCount + 1;
 					
 				};
 				
@@ -352,7 +360,7 @@ if (scclootDebugMessages) then {
 	
 	if (_lootSpawnedThisPass > 0) then {
 	
-		_debugMsg = format ["[SCCLoot] Successfully created %1 items in %2 buildings (%3 blacklisted)", _lootSpawnedThisPass, _buildingsWithoutLootThisPass, _buildingsBlacklistedThisPass];
+		_debugMsg = format ["[SCCLoot] Successfully created %1 items in %2 buildings (%3 blacklisted, %4 containers)", _lootSpawnedThisPass, _buildingsWithoutLootThisPass, _buildingsBlacklistedThisPass, _lootContainerCount];
 		
 	} else {
 		
