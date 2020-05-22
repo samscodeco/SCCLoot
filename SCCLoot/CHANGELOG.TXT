@@ -2,7 +2,13 @@
 0.4
 ----------------
 Features:
-- Random loot spawns can be added to pre-placed crates and boxes
+- Random loot spawns can be added to pre-placed crates and boxes.
+
+Changes:
+- Debug messages now include info about pre-placed containers.
+
+Fixes:
+- All loot out of player range is now deleted in a single cleanup pass.
 
 ----------------
 0.3 (2020-05-06)
@@ -16,7 +22,7 @@ Changes:
 - Config file building classes are no longer case-sensitive.
 
 Fixes:
-- Fixed most issues with loot clipping into the floor
+- Fixed most issues with loot clipping into the floor.
 
 ----------------
 0.2 (2020-05-02)
