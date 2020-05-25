@@ -6,6 +6,7 @@ Features:
 
 Changes:
 - Debug messages now include info about pre-placed containers.
+- Improvements to functions in SCCLoot\Extras
 
 Fixes:
 - All loot out of player range is now deleted in a single cleanup pass.
