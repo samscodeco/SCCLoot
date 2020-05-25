@@ -1,17 +1,5 @@
 // Load loot system config
-[] call compile preprocessFileLineNumbers "SCCLoot\Config\lootConfig.sqf";
-
-// Load loot tables
-[] call compile preprocessFileLineNumbers "SCCLoot\Config\lootTables.sqf";
-
-// Load building config
-[] call compile preprocessFileLineNumbers "SCCLoot\Config\lootBuildings.sqf";
-
-// Load buildings with custom positions
-[] call compile preprocessFileLineNumbers "SCCLoot\Config\lootAddedBuildings.sqf";
-
-// Load pre-defined containers
-[] call compile preprocessFileLineNumbers "SCCLoot\Config\lootContainers.sqf";
+[] call compile "SCCLoot\lootCompile.sqf";
 
 // Get buildings with custom positions
 scclootCustomPosClassnames = [];
