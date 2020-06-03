@@ -24,7 +24,6 @@ For a more detailed description and help, see the README.txt file inside the SCC
 
 - [Latest Stable (0.4)](http://www.samscode.co/code/SCCLoot-0.4.zip)
 - [Forum Page](https://forums.bohemia.net/forums/topic/229026-release-sccloot/)
-- [Armaholic Page](http://www.armaholic.com/page.php?id=36022)
 - [GitHub Source](https://github.com/samscodeco/SCCLoot)
 
 ## License
