@@ -43,7 +43,7 @@ scc_fnc_highlightBuldingPositions = {
 	
 };
 
-scc_fnc_getBuildingPositions = {
+scc_fnc_getCustomBuildingPositions = {
 	
 	// Gets positions of custom position markers
 	// Parameters: 	
