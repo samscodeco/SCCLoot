@@ -1,5 +1,6 @@
 // Load loot system config
-[] call compile "SCCLoot\lootCompile.sqf";
+_compileScripts = [] execVM "SCCLoot\lootCompile.sqf";
+waitUntil {scriptDone _compileScripts};
 
 // Get buildings with custom positions
 scclootCustomPosClassnames = [];
