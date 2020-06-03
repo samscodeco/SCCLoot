@@ -52,7 +52,7 @@ scc_fnc_getBuildingPositions = {
 	// Returns: Array of positions
 	
 	// Get parameters
-	_markerClass = _this select 0
+	_markerClass = _this select 0;
 	_buildingObject = _this select 1;
 	
 	// Create array of positions
@@ -95,7 +95,7 @@ scc_fnc_generateBuildingEntries = {
 		
 		_nearbyBuildingClasses pushBackUnique (typeOf _x);
 		
-	} forEach _nearbyBuildings = nearestObjects [player, ["building"], _distParam];
+	} forEach nearestObjects [player, ["building"], _distParam];
 	
 	// Create array for final config entries
 	_configEntries = [];
