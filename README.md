@@ -16,17 +16,16 @@ Got feedback/suggestions, or using this script in your mission? Get in touch!
 
 ## Configuration
 
-There are four config files in the 'Config' directory: 'lootConfig', 'lootBuildings', 'lootTables' and 'lootAddedBuildings'. Editing any other
-files other than these three may result in unintended behaviour.
+There are four config files in the 'Config' directory: 'lootConfig', 'lootBuildings', 'lootTables' and 'lootAddedBuildings'. Editing any other files other than these three may result in unintended behaviour.
 
 ## More Information
 
 For a more detailed description and help, see the README.txt file inside the SCCLoot directory.
 
-- [Latest Stable (0.3)](http://www.samscode.co/code/SCCLoot.zip)
+- [Latest Stable (0.4)](http://www.samscode.co/code/SCCLoot-0.4.zip)
 - [Forum Page](https://forums.bohemia.net/forums/topic/229026-release-sccloot/)
 - [Armaholic Page](http://www.armaholic.com/page.php?id=36022)
-- [GitHub Source (Latest Unstable)](https://github.com/samscodeco/SCCLoot)
+- [GitHub Source](https://github.com/samscodeco/SCCLoot)
 
 ## License
 
