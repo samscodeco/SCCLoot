@@ -13,6 +13,6 @@ while {true} do {
 	
 	_lootSpawnScript = [] execVM "SCCLoot\System\lootSpawn.sqf";
 	_lootSpawnCleanup = [] execVM "SCCLoot\System\lootCleanup.sqf";
-	sleep 10;
+	sleep scclootWaitTime;
 	
 };
