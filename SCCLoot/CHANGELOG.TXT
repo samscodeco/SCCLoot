@@ -1,12 +1,24 @@
 ----------------
-0.4
+0.5 (unstable)
+----------------
+Features:
+- Added capability for cross-module interaction.
+
+Changes:
+- Combined building-related config files.
+
+Fixes:
+- Wait time now uses the value set in the config file.
+
+----------------
+0.4 (2020-06-03)
 ----------------
 Features:
 - Random loot spawns can be added to pre-placed crates and boxes.
 
 Changes:
 - Debug messages now include info about pre-placed containers.
-- Improvements to functions in SCCLoot\Extras
+- Improvements to functions in SCCLoot\Extras.
 
 Fixes:
 - All loot out of player range is now deleted in a single cleanup pass.
