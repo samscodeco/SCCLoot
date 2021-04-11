@@ -1,4 +1,4 @@
-SCCLoot for Arma 3 (Version 0.4 - 2020-06-03)
+SCCLoot for Arma 3 (Version 0.5 - 2021-04-11)
 by samscodeco <sam@samscode.co>
 
 This script adds simple, configurable loot spawning to any Arma 3 mission.
@@ -33,6 +33,16 @@ lootConfig.sqf - Contains basic settings for the loot system. These include thin
 lootBuildings.sqf - Lists all buildings and the types of loot they spawn. You can also add buildings to the blacklist so that they are ignored by the loot system. By default, this contains all buildings from Arma 3 and CUP terrains.
 
 lootTables.sqf - This is probably the only config file you'll need to make major changes to. It contains a list of items and their chances to spawn for each category of loot.
+
+Example loot table:
+
+scclootIndustrial = [
+
+	["H_Hat_blue",100],
+	["H_Hat_tan",75],
+	["H_StrawHat",50]
+
+];
 
 If you recieve error messages after making changes to the config files, check carefully for missing semicolons (;), quotes (") or square brackets ([]).
 

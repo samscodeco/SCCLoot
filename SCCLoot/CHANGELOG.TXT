@@ -1,5 +1,5 @@
 ----------------
-0.5 (unstable)
+0.5 (2021-04-11)
 ----------------
 Features:
 - Added capability for cross-module interaction.
@@ -11,6 +11,7 @@ Changes:
 
 Fixes:
 - Wait time now correctly uses the value set in the config file.
+- Backpacks can be spawned as loot
 
 ----------------
 0.4 (2020-06-03)
