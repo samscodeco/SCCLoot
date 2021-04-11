@@ -3,18 +3,20 @@
 ----------------
 Features:
 - Added capability for cross-module interaction.
+- Loot spawn and loot cleanup can now have different delays.
 
 Changes:
 - Combined building-related config files.
+- Loot spawn now waits for cleanup script to finish before running, and vice versa.
 
 Fixes:
-- Wait time now uses the value set in the config file.
+- Wait time now correctly uses the value set in the config file.
 
 ----------------
 0.4 (2020-06-03)
 ----------------
 Features:
-- Random loot spawns can be added to pre-placed crates and boxes.
+- Random loot spawning can be applied to pre-placed crates and boxes.
 
 Changes:
 - Debug messages now include info about pre-placed containers.
