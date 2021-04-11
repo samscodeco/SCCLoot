@@ -22,11 +22,11 @@ There are four config files in the 'Config' directory: 'lootConfig', 'lootBuildi
 
 For a more detailed description and help, see the README.txt file inside the SCCLoot directory.
 
-- [Latest Stable (0.4)](http://www.samscode.co/code/SCCLoot-0.4.zip)
+- [Latest Stable (0.4)](http://www.samscode.co/files/SCCLoot-0.4.zip)
 - [Forum Page](https://forums.bohemia.net/forums/topic/229026-release-sccloot/)
 - [GitHub Source](https://github.com/samscodeco/SCCLoot)
 
 ## License
 
-This script released under the BSD License. You are free to modify or distribute it, provided that the original copyright notice is retained.
+This script is released under the BSD License. You are free to modify or distribute it, provided that the original copyright notice is retained.
 For more information, see the license file in the source directory.

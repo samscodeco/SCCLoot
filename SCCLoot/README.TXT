@@ -66,7 +66,7 @@ Step 1 - Mark the new positions - Open up your mission and place the building yo
 
 Step 2 - Get the relative positions - Press ESC to bring up the debug console and run: 
 	
-	["marker", building] call scc_fnc_getCustomBuildingPositions;
+	["marker", building] call SCC_fnc_getCustomBuildingPositions;
 	
 Where 'marker' is the classname of the marker objects you have placed and 'building' is the building you're getting custom positions for. This will output an array containing the coordinates of every marker in relation to the model. Select and copy the entire output.
 

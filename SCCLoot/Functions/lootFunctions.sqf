@@ -2,11 +2,12 @@
 // These functions are designed to ease the process of adding custom structures/building positions to SCCLoot.
 // For more information, see the README in the script directory.
 
-scc_fnc_highlightBuldingPositions = {
-	
-	// Creates an arrow highlighting every position in surrounding buildings and structures
-	// Paramteters: Distance (Number) - Distance from the player to search for buildings
-	// Returns: Array of buildings without positions
+// SCC_fnc_highlightBuldingPositions
+// Creates an arrow highlighting every position in surrounding buildings and structures
+// Paramteters: Distance (Number) - Distance from the player to search for buildings
+// Returns: Array of buildings without positions
+
+SCC_fnc_highlightBuldingPositions = {
 	
 	// Get distance to search parameter
 	_searchDist = _this select 0;
@@ -43,13 +44,14 @@ scc_fnc_highlightBuldingPositions = {
 	
 };
 
-scc_fnc_getCustomBuildingPositions = {
-	
-	// Gets positions of custom position markers
-	// Parameters: 	
-	// Marker (Object) - Class of the marker objects
-	// Structure (Object) - Structure to apply the custom positions to
-	// Returns: Array of positions
+// SCC_fnc_getCustomBuildingPositions
+// Gets positions of custom position markers
+// Parameters: 	
+// Marker (Object) - Class of the marker objects
+// Structure (Object) - Structure to apply the custom positions to
+// Returns: Array of positions
+
+SCC_fnc_getCustomBuildingPositions = {
 	
 	// Get parameters
 	_markerClass = _this select 0;
@@ -75,13 +77,14 @@ scc_fnc_getCustomBuildingPositions = {
 	
 };
 
-scc_fnc_generateBuildingEntries = {
-	
-	// Finds building objects around the player and formats their classnames and loot type to be used in the config file
-	// Parameters: 
-	// Loot Type (Number) - Type of loot to spawn in the buildings
-	// Distance (Number) - Distance from player to search for buildings
-	// Returns: Array in the format [[buildingClass,lootType],[buildingClass,lootType]...];
+// SCC_fnc_generateBuildingEntries
+// Finds building objects around the player and formats their classnames and loot type to be used in the config file
+// Parameters: 
+// Loot Type (Number) - Type of loot to spawn in the buildings
+// Distance (Number) - Distance from player to search for buildings
+// Returns: Array in the format [[buildingClass,lootType],[buildingClass,lootType]...];
+
+SCC_fnc_generateBuildingEntries = {
 	
 	// Get loot type
 	_lootType = str (_this select 0);

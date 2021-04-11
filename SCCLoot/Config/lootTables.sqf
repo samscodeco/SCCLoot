@@ -11,7 +11,7 @@ scclootDefault = [
 
 // Civilian loot
 scclootCivil = [
-	["hgun_P07_F",100]
+	["B_AssaultPack_blk",100]
 ];
 
 // Industrial loot
