@@ -1,4 +1,21 @@
 ----------------
+0.6 (Unstable)
+----------------
+Features:
+- New "Battle Royale" style loot spawning mode. Loot spawns once at the start of the mission, can be reset through code.
+
+Changes:
+- Complete code rewrite, which should result in increased performance.
+  - All loot spawning functions are only run when needed.
+  - Functions are now compiled on mission start.
+- Removed some custom positions to keep loot spots roughly proportional to building size.
+
+Fixes:
+- Loot no longer spawns inside the floor of custom buildings due to incorrect height format conversion.
+- Fixed blacklisted buildings sometimes spawning loot.
+- Fixed rare crash during building loot spawn.
+
+----------------
 0.5 (2021-04-11)
 ----------------
 Features:
@@ -11,7 +28,7 @@ Changes:
 
 Fixes:
 - Wait time now correctly uses the value set in the config file.
-- Backpacks can be spawned as loot
+- Backpacks can be spawned as loot.
 
 ----------------
 0.4 (2020-06-03)
